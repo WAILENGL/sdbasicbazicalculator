@@ -1,0 +1,116 @@
+@import "tailwindcss";
+
+@theme {
+  --font-mono: "Fira Code", "Courier New", monospace;
+  
+  --color-bg-dark: #181a1f;
+  --color-bg-panel: #22252a;
+  --color-border-main: #3a3f4b;
+  --color-text-main: #e2e8f0;
+  --color-text-dim: #94a3b8;
+
+  --color-wood-yang: #16a34a;
+  --color-wood-yin: #4ade80;
+  --color-fire-yang: #dc2626;
+  --color-fire-yin: #f87171;
+  --color-earth-yang: #92400e;
+  --color-earth-yin: #d97706;
+  --color-metal-yang: #94a3b8;
+  --color-metal-yin: #cbd5e1;
+  --color-water-yang: #2563eb;
+  --color-water-yin: #60a5fa;
+}
+
+@layer base {
+  body {
+    @apply bg-bg-dark text-text-main font-mono m-0 p-10 min-h-screen flex flex-col items-center overflow-x-hidden;
+  }
+
+  /* Hide scrollbars for all elements */
+  * {
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE/Edge */
+  }
+
+  *::-webkit-scrollbar {
+    display: none; /* Chrome/Safari */
+  }
+
+  h1, h2 {
+    @apply uppercase tracking-widest border-b border-border-main pb-2 w-full max-w-[1800px];
+  }
+
+  h2 {
+    @apply mt-10;
+  }
+}
+
+@layer components {
+  .section-title {
+    @apply text-center text-text-main uppercase tracking-widest text-2xl font-bold mb-5 border-b border-border-main pb-2 w-full;
+  }
+
+  .controls-board {
+    @apply flex gap-5 mb-10 bg-bg-panel p-5 border border-border-main rounded-sm w-full max-w-[1800px] justify-end flex-wrap;
+  }
+
+  .main-display-area {
+    @apply flex gap-10 w-full items-start justify-center flex-wrap mb-10;
+  }
+
+  .chart-section {
+    @apply flex flex-col items-center min-w-max;
+  }
+
+  .legend-board {
+    @apply flex flex-col gap-4 bg-bg-panel p-4 border border-border-main rounded-sm w-64 flex-shrink-0;
+  }
+
+  .legend-item {
+    @apply flex flex-col items-start p-3 border border-border-main rounded-sm bg-bg-dark w-full box-border;
+  }
+
+  .control-group {
+    @apply flex flex-col gap-2;
+  }
+
+  select, input {
+    @apply bg-bg-dark text-text-main border border-border-main p-2 font-mono outline-none rounded-none;
+  }
+
+  .chart-grid {
+    @apply flex flex-row-reverse gap-4 justify-center;
+  }
+
+  .pillar-column {
+    @apply flex-initial w-60 flex flex-col gap-2;
+  }
+
+  .pillar-header {
+    @apply text-center text-text-dim text-sm tracking-widest mb-1;
+  }
+
+  .data-box {
+    @apply bg-bg-panel border border-border-main p-4 rounded-sm flex flex-col items-center h-44 justify-between;
+  }
+
+  .daymaster-box {
+    @apply border-water-yin shadow-[0_0_10px_rgba(96,165,250,0.1)];
+  }
+
+  .hanzi {
+    @apply text-4xl font-bold my-2;
+  }
+
+  .ten-god {
+    @apply font-bold text-white tracking-widest text-sm text-center;
+  }
+
+  .hidden-stems {
+    @apply w-full border-t border-dashed border-border-main pt-2 mt-auto text-xs flex flex-col gap-1.5;
+  }
+
+  .hidden-stem-row {
+    @apply grid grid-cols-[30px_30px_30px] justify-center gap-4 w-full items-center text-left;
+  }
+}
