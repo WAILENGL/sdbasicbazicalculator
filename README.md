@@ -1,6 +1,6 @@
 <div align="center">
   <a href="https://scriptingdestiny.com">
-    <img width="1200" height="475" alt="Scripting Destiny Logo" src="https://github.com/WAILENGL/basic-bazi-calculator/blob/master/Logo.png" />
+    <img width="1200" height="475" alt="Scripting Destiny Logo" src="[https://github.com/WAILENGL/basic-bazi-calculator/blob/master/Logo.png](https://raw.githubusercontent.com/WAILENGL/sdbasicbazicalculator/refs/heads/main/Logo.png)" />
   </a>
 </div>
 # Scripting Destiny: Core Parameters (Basic BaZi)
